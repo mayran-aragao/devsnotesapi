@@ -4,12 +4,10 @@ const NoteController = require ('./controllers/NoteController');
 
 const router = express.Router();
 
-router.get('/ping',NoteController.ping );
-
-router.get('/notes', NoteController.all);
-/*router.get('/note/:_id', NoteController.one);
+router.get('/notes', NoteController.all); 
+router.get('/note/:id', NoteController.one);
 router.post('/note', NoteController.new);
-router.put('/note/:_id', NoteController.edit);
-router.delete('/note/:_id', NoteController.delete);*/
+router.put('/note/:id', NoteController.edit);
+router.delete('/note/:id', NoteController.delete);
 
 module.exports = router;
